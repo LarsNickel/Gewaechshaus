@@ -1,6 +1,3 @@
-function macheEtwas (num: number) {
-	
-}
 function Vorhang () {
     while (pins.digitalReadPin(DigitalPin.P13) == 0) {
         ContinuousServo.spin_other_way_with_speed(AnalogPin.P1, 50)
@@ -30,5 +27,4 @@ basic.forever(function () {
     Helligkeit()
     Feuchtigkeit()
     Vorhang()
-    macheEtwas(1)
 })
