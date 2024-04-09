@@ -17,7 +17,7 @@ function Feuchtigkeit () {
     serial.writeValue("Feuchtigkeit", feuchte)
 }
 function Pumpe () {
-    pins.digitalWritePin(DigitalPin.P8, 1)
+	
 }
 let feuchte = 0
 pins.setPull(DigitalPin.P13, PinPullMode.PullUp)
