@@ -1,5 +1,4 @@
 input.onButtonPressed(Button.A, function () {
-    pins.digitalWritePin(DigitalPin.P10, 0)
     mode_flag = 0
 })
 function Licht (num: number) {
@@ -41,10 +40,12 @@ function Helligkeit () {
     led.enable(true)
     lumi = input.lightLevel()
     serial.writeValue("Helligkeit", lumi)
+    basic.pause(100)
     led.enable(false)
     return lumi
 }
 input.onButtonPressed(Button.B, function () {
+    pins.digitalWritePin(DigitalPin.P10, 0)
     mode_flag = 1
 })
 function Feuchtigkeit () {
